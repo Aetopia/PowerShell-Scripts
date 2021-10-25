@@ -1,4 +1,3 @@
-﻿cls
 $Host.UI.RawUI.WindowTitle = "Lunar Client Lite Installer - Aetopia"
 Import-Module BitsTransfer
 $ErrorActionPreference = 'SilentlyContinue'
