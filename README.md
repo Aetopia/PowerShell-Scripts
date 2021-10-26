@@ -10,3 +10,10 @@ In Windows+R:
 ```
 powershell irm https://raw.githubusercontent.com/Aetopia/PowerShell-Scripts/main/LCL%20Installer.ps1 | iex
 ```
+
+### BlurGUI + CTT Blur Installer
+
+In Windows+R:
+```
+https://raw.githubusercontent.com/Aetopia/PowerShell-Scripts/main/Blur%20GUI%20%2B%20CTT%20Blur%20Installer.ps1
+```
