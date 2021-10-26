@@ -24,6 +24,7 @@ CHOICE /C 1234567 /N
 switch ($LASTEXITCODE){
 1{
 cls
+Remove-Item "$home\Options.ini" -Force
 Write-Output "Installing LCLPy..."
 Write-Output ""
 Start-BitsTransfer -DisplayName "Downloading LCLPy..." -Description " " "https://github.com/Aetopia/LCLPy/releases/latest/download/LCLPy.exe" "$env:LOCALAPPDATA\Microsoft\WindowsApps\LCLPy.exe"
@@ -40,6 +41,7 @@ irm raw.githubusercontent.com/couleur-tweak-tips/utils/main/Installers/LunarClie
 # LCLPy + GraalVM
 3{
 cls
+Remove-Item "$home\Options.ini" -Force
 if (!(Test-Path -LiteralPath "$env:ProgramData\GraalVM")){
 Write-Output "Installing GraalVM..."
 Start-BitsTransfer -DisplayName "Downloading GraalVM..." -Description " " "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.2.0/graalvm-ce-java16-windows-amd64-21.2.0.zip" "$env:TEMP\GraalVM.zip"
@@ -54,7 +56,6 @@ Write-Output "GraalVM is already installed..."
 Write-Output "Installing LCLPy..."
 Start-BitsTransfer -DisplayName "Downloading LCLPy..." -Description " " "https://github.com/Aetopia/LCLPy/releases/latest/download/LCLPy.exe" "$env:LOCALAPPDATA\Microsoft\WindowsApps\LCLPy.exe"
 Write-Output 'Setting up "Options.ini"...'
-Remove-Item "$env:LOCALAPPDATA\Microsoft\WindowsApps\Options.ini" -Force
 "[Minecraft]
 1.7 directory = $env:APPDATA\.minecraft
 1.8 directory = $env:APPDATA\.minecraft
@@ -99,6 +100,8 @@ cls
 Write-Output "Removing LCL..."
 Remove-Item "$env:ProgramData\GraalVM" -Force -Recurse
 Remove-Item "$env:LOCALAPPDATA\Microsoft\WindowsApps\LCL.exe" -Force
+Remove-Item "$env:LOCALAPPDATA\Microsoft\WindowsApps\LCL.ahk" -Force
+Remove-Item "$env:LOCALAPPDATA\Microsoft\WindowsApps\LCL.Ink" -Force
 Remove-Item "$env:LOCALAPPDATA\Microsoft\WindowsApps\Config.ini" -Force
 Remove-Item "$env:LOCALAPPDATA\Microsoft\WindowsApps\Resources" -Force -Recurse
 Write-Output "Finished."
