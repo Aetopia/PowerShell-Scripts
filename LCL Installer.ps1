@@ -1,4 +1,3 @@
-# Lunar Client Lite Installer
 $Host.UI.RawUI.WindowTitle = "Lunar Client Lite Installer - Aetopia"
 Import-Module BitsTransfer
 $ErrorActionPreference = 'SilentlyContinue'
@@ -30,7 +29,6 @@ Write-Output ""
 Start-BitsTransfer -DisplayName "Downloading LCLPy..." -Description " " "https://github.com/Aetopia/LCLPy/releases/latest/download/LCLPy.exe" "$env:LOCALAPPDATA\Microsoft\WindowsApps\LCLPy.exe"
 Write-Output "LCLPy Installed."
 Write-Output ""
-cmd /c lclpy.exe -h
 pause
 }
 # LCL
@@ -78,8 +76,6 @@ arguments = -Xms3G -Xmx3G -Xmn1G -XX:+DisableAttachMechanism -XX:+UnlockExperime
 lc cosmetics = Off" | Set-Content "$home\Options.ini"
 Write-Output "LCLPy + GraalVM Installed."
 Write-Output ""
-cmd /c lclpy.exe -h
-Remove-Item "Options.ini" -Force
 pause
 }
 
