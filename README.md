@@ -15,5 +15,5 @@ powershell irm https://raw.githubusercontent.com/Aetopia/PowerShell-Scripts/main
 
 In Windows+R:
 ```
-powershell irm https://raw.githubusercontent.com/Aetopia/PowerShell-Scripts/main/Blur%20GUI%20%2B%20CTT%20Blur%20Installer.ps1 | iex
+powershell irm https://raw.githubusercontent.com/Aetopia/PowerShell-Scripts/main/BlurGUI%2BCTT-Blur-Installer.ps1 | iex
 ```
