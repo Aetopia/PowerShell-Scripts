@@ -24,12 +24,13 @@ CHOICE /C 1234567 /N
 switch ($LASTEXITCODE){
 1{
 cls
-Remove-Item "$home\Options.ini" -Force
+Remove-Item "$env:LOCALAPPDATA\Microsoft\WindowsApps\Options.ini" -Force
 Write-Output "Installing LCLPy..."
-Write-Output ""
+
 Start-BitsTransfer -DisplayName "Downloading LCLPy..." -Description " " "https://github.com/Aetopia/LCLPy/releases/latest/download/LCLPy.exe" "$env:LOCALAPPDATA\Microsoft\WindowsApps\LCLPy.exe"
 Write-Output "LCLPy Installed."
 Write-Output ""
+cmd /c lclpy -h
 pause
 }
 # LCL
@@ -41,7 +42,7 @@ irm raw.githubusercontent.com/couleur-tweak-tips/utils/main/Installers/LunarClie
 # LCLPy + GraalVM
 3{
 cls
-Remove-Item "$home\Options.ini" -Force
+Remove-Item "$env:LOCALAPPDATA\Microsoft\WindowsApps\Options.ini" -Force
 if (!(Test-Path -LiteralPath "$env:ProgramData\GraalVM")){
 Write-Output "Installing GraalVM..."
 Start-BitsTransfer -DisplayName "Downloading GraalVM..." -Description " " "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.2.0/graalvm-ce-java16-windows-amd64-21.2.0.zip" "$env:TEMP\GraalVM.zip"
@@ -74,9 +75,10 @@ arguments = -Xms3G -Xmx3G -Xmn1G -XX:+DisableAttachMechanism -XX:+UnlockExperime
 1.18 java = $home\.lunarclient\jre\zulu16.30.15-ca-fx-jre16.0.1-win_x64\bin\javaw.exe
 
 [Optimizations]
-lc cosmetics = Off" | Set-Content "$home\Options.ini"
+lc cosmetics = Off" | Set-Content "$env:LOCALAPPDATA\Microsoft\WindowsApps\Options.ini"
 Write-Output "LCLPy + GraalVM Installed."
 Write-Output ""
+cmd /c lclpy -h
 pause
 }
 
@@ -91,7 +93,7 @@ irm https://github.com/couleur-tweak-tips/utils/raw/main/Installers/GraalVM.ps1 
 cls
 Write-Output "Removing LCLPy..."
 Remove-Item "$env:LOCALAPPDATA\Microsoft\WindowsApps\LCLPy.exe" -Force
-Remove-Item "$home\Options.ini" -Force
+Remove-Item "$env:LOCALAPPDATA\Microsoft\WindowsApps\Options.ini" -Force
 Write-Output "Finished."
 pause
 }
