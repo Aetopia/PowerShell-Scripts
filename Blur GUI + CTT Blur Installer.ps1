@@ -1,4 +1,4 @@
-﻿$Host.UI.RawUI.WindowTitle = "Blur GUI + CTT Blur Installer"
+$Host.UI.RawUI.WindowTitle = "Blur GUI + CTT Blur Installer"
 $ErrorActionPreference = 'SilentlyContinue'
 Import-Module BitsTransfer
 Write-Output "Installation Options
