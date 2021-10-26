@@ -1,3 +1,4 @@
+# CTT Blur Installer made by Couleur.
 $Host.UI.RawUI.WindowTitle = "Blur GUI + CTT Blur Installer"
 $ErrorActionPreference = 'SilentlyContinue'
 Import-Module BitsTransfer
