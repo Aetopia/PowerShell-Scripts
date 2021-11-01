@@ -17,3 +17,9 @@ In Windows+R:
 ```
 powershell irm https://raw.githubusercontent.com/Aetopia/PowerShell-Scripts/main/BlurGUI%2BCTT-Blur-Installer.ps1 | iex
 ```
+
+### [WebCord](https://github.com/SpacingBat3/WebCord) Installer
+In Windows + R:
+```
+powershell irm https://raw.githubusercontent.com/Aetopia/PowerShell-Scripts/main/WebCord%20Installer.ps1 | iex
+```
