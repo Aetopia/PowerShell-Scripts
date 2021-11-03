@@ -11,7 +11,7 @@ In Windows+R:
 powershell irm https://raw.githubusercontent.com/Aetopia/PowerShell-Scripts/main/LCL%20Installer.ps1 | iex
 ```
 
-### BlurGUI + [CTT Blur Installer](https://github.com/couleur-tweak-tips/utils/blob/main/Installers/blur.ps1)
+### BlurConfGUI + [CTT Blur Installer](https://github.com/couleur-tweak-tips/utils/blob/main/Installers/blur.ps1)
 
 In Windows+R:
 ```
