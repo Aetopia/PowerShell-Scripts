@@ -9,10 +9,10 @@ Write-Output "Downloading WebCord ($Tag)..."
 
 #Download WebCord.
 if($env:PROCESSOR_ARCHITECTURE -eq "x86"){
-    $Download = "https://github.com/SpacingBat3/WebCord/releases/latest/download/WebCord-win32-x64-$Version.zip"
+    $Download = "https://github.com/SpacingBat3/WebCord/releases/latest/download/WebCord-win32-ia32-$Version.zip"
 }
 else {
-    $Download = "https://github.com/SpacingBat3/WebCord/releases/latest/download/WebCord-win32-ia32-$Version.zip"
+    $Download = "https://github.com/SpacingBat3/WebCord/releases/latest/download/WebCord-win32-x64-$Version.zip"
 }
 $DownloadOutput = "$env:TEMP\WebCord$Version.zip"
 curl.exe -# -L $Download -output $DownloadOutput
