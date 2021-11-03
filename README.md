@@ -15,7 +15,7 @@ powershell irm https://raw.githubusercontent.com/Aetopia/PowerShell-Scripts/main
 
 In Windows+R:
 ```
-powershell irm https://raw.githubusercontent.com/Aetopia/PowerShell-Scripts/main/BlurGUI%2BCTT-Blur-Installer.ps1 | iex
+powershell irm https://raw.githubusercontent.com/Aetopia/PowerShell-Scripts/main/BlurConfGUI%2BCTT-Blur-Installer.ps1 | iex
 ```
 
 ### [WebCord](https://github.com/SpacingBat3/WebCord) Installer
