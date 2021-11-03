@@ -1,12 +1,11 @@
 $ErrorActionPreference = 'SilentlyContinue'
+Import-Module BitsTransfer
 # Get the latest tag.
 $Tag = (Invoke-RestMethod -Uri "https://api.github.com/repos/SpacingBat3/WebCord/releases")[0].tag_name
 $Version = $Tag.Trim("v")
 
 $Host.UI.RawUI.WindowTitle="WebCord Installer - Aetopia"
 Write-Output "WebCord made by SpacingBat3: https://github.com/SpacingBat3/WebCord"
-Write-Output "Downloading WebCord ($Tag)..."
-
 #Download WebCord.
 if($env:PROCESSOR_ARCHITECTURE -eq "x86"){
     $Download = "https://github.com/SpacingBat3/WebCord/releases/latest/download/WebCord-win32-ia32-$Version.zip"
@@ -15,7 +14,7 @@ else {
     $Download = "https://github.com/SpacingBat3/WebCord/releases/latest/download/WebCord-win32-x64-$Version.zip"
 }
 $DownloadOutput = "$env:TEMP\WebCord$Version.zip"
-curl.exe -# -L $Download -output $DownloadOutput
+Start-BitsTransfer -DisplayName "Downloading WebCord ($Tag)..." -Description " " $Download $DownloadOutput
 
 #Extract WebCord.
 $InstallDirectory = "$env:APPDATA\WebCord"
@@ -33,3 +32,4 @@ $Shortcut.Save()
 
 # Start WebCord.
 cmd /c start "$InstallDirectory\webcord.exe"
+exit
