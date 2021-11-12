@@ -1,6 +1,13 @@
 # PowerShell Scripts
 Github Repository for my PowerShell Scripts.
 
+## Modules
+### PythonURL
+This PowerShell module allows retrieve contents of a Python script and then executes the retrieved Python script.          
+Similar to PowerShell's `irm $URL | iex` for PowerShell Scripts.     
+
+`PythonURL` Module: https://github.com/Aetopia/PowerShell-Scripts/blob/main/PythonURL.psm1
+
 ## Scripts
 
 ### Lunar Client Lite Installer
